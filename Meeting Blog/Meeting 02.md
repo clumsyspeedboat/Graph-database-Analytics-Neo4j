@@ -1,7 +1,7 @@
-#Goals &nbsp;
-*PPt on Jabref with Overleaf
-*PPt on clinical graph analysis
-*PPt on Neo4j
+#Goals<br/>
+*PPt on Jabref with Overleaf<br/>
+*PPt on clinical graph analysis<br/>
+*PPt on Neo4j<br/>
 
 #Task Completed
 
