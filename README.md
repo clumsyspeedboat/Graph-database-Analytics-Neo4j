@@ -11,7 +11,7 @@ A project on neo4j for the analysis of clinical data
 Rahul Mondal : rahulmondal415@gmail.com <br/>
 Syed Abdullah Rizvi : syedabdullahrizvi@gmail.com<br/>
 Danish Murad : Danishmurad@gmail.com <br/>
-Faizhan Ali : faizan8201@gmail.com <br/>
+Faizan Ali : faizan8201@gmail.com <br/>
 Sitashma Rajbhandari : sitashmarajbhandari@gmail.com <br/>
 
 ## Goals
