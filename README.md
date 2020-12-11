@@ -8,11 +8,11 @@ A project on neo4j for the analysis of clinical data
 6 x 30h x 5 people = 900h
 
 ## Members
-Rahul Mondal : rahulmondal415@gmail.com <\br>
-Syed Abdullah Rizvi : syedabdullahrizvi@gmail.com<\br>
-Danish Murad : Danishmurad@gmail.com <\br>
-Faizhan Ali : faizan8201@gmail.com <\br>
-Sitashma Rajbhandari : sitashmarajbhandari@gmail.com <\br>
+Rahul Mondal : rahulmondal415@gmail.com <br/>
+Syed Abdullah Rizvi : syedabdullahrizvi@gmail.com<br/>
+Danish Murad : Danishmurad@gmail.com <br/>
+Faizhan Ali : faizan8201@gmail.com <br/>
+Sitashma Rajbhandari : sitashmarajbhandari@gmail.com <br/>
 
 ## Goals
 Show potential of neo4j for the analysis of clinical data and provide performant Queries
