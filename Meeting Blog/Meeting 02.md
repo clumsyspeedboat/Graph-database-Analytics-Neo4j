@@ -8,10 +8,12 @@
 # Task Completed
 * Getting to Know Neo4j
 * Using Jabref to cite two papers for the project reports
-* setting up Clinical graph analysis
 * A short report on Jabref and Overleaf
 * Created a git hub repository for the project and updated the wiki
 
+# Task in Progress
+* setting up Clinical graph analysis
+* Work on Mpa cloud console
 
 # Next Goal
 * Integrate CKG into Neo4j<br/>
