@@ -1,20 +1,20 @@
 ## Goals  
-* Setup neo4j and get familiar
+* Setup and get familiar with Neo4j
 * Discuss member roles
-* Learn Latex in Overleaf
+* Latex in overleaf
 * Prepare a short report on neo4j
 
 ## Tasks completed
 * Getting familiar with neo4j and latex in overleaf
-* Member roles has been assinged
-* Faizhan is working on Neo4j and Cypher
-* Syed Abdulla and Danish Murrad is working on Clinical Knowledge Graph
-* Rahul Mondal is working on MPA
-* Sitashma Rajbhandari is working on Overleaf to write the paper
+* Individual roles of each member discussed and assigned
+* Prepared a short report on Neo4j
+* Understanding Clinical Knoweledge Graph
 
 
 ## Next Goals
 * prepare a summary of the tasks of meeting one
 * get familiar with jabref to cite paper in latex
 * Work on Mpa cloud console
+* Prepare a presentation on Clinical Knowelegde graph and Neoaj
+* Prepare a report on Jabref and overleaf
 http://www.mpa.ovgu.de/
