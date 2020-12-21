@@ -13,6 +13,7 @@
 
 # Task in progress
 * Make Mpa Cloud working
+* Integrate CKG into Neo4j
 
 
 # Goals for next week
