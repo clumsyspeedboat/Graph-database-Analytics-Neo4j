@@ -17,3 +17,7 @@
 
 
 # Goals for next week
+* Prepare installation script for CKG in Neo4j
+* Strategy to impprove graphdatabase
+* Survey on different kinds of graphdatabase
+* Get database up and running with Neo4j and queries
