@@ -5,10 +5,14 @@
 * Procedure for Neo4j<br/>
 
 # Task completed
+* Survey on the criterias to compare graph database
+* Research question that fits the task
+* Survey on Procedure for Neo4j
 
 
 
 # Task in progress
+* Make Mpa Cloud working
 
 
 # Goals for next week
