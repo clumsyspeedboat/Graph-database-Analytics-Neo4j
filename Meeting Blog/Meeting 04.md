@@ -12,10 +12,13 @@
 
 # Task on progress
 * Make MPA cloud working
+* Research question for the project
 
 
 # Goals for Next Week
 * Include popular graph database in the survey
-* Overall struture of the graph
-* install neo4j graph for everyone 
+* Quering different proteins to see similarities
+* install CKG and integrate neo4j  for everyone 
 * how to query different proteins together to see their combination
+* create a batch file for to properly download CKG
+* Survey on the GUI for graph databases
