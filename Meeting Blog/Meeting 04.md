@@ -5,7 +5,6 @@
 * Get database up and running with Neo4j and queries
 
 # Task Completed
-* Prepare installation script for CKG in Neo4j
 * Survey on different kinds of graphdatabase
 * Strategy to improve graphdatabase
 * Get database up and running with Neo4j and queries
@@ -13,6 +12,7 @@
 # Task on progress
 * Make MPA cloud working
 * Research question for the project
+* Prepare installation script for CKG in Neo4j
 
 
 # Goals for Next Week
