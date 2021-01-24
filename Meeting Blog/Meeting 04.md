@@ -20,5 +20,5 @@
 * Quering different proteins to see similarities
 * install CKG and integrate neo4j  for everyone 
 * how to query different proteins together to see their combination
-* create a batch file for to properly download CKG
+* install CKG and integrate neo4j  for everyone 
 * Survey on the GUI for graph databases
