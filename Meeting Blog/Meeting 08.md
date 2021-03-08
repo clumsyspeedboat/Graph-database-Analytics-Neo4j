@@ -15,3 +15,4 @@
 * All the qurieng tasks could not be completed because we were unable to install CKG on remote server
 
 # Goal for next week
+* Do these tasks with small dataset on own PCs
