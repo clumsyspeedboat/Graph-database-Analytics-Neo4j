@@ -1,5 +1,8 @@
 # Goals
-* do the task of meeting 8 with smaller dataset
+* Use procedure to get subgraph
+* shortest distance Querying
+* Group peptide and protein based on shared overlapped peptides
+* Build sample database with important relationship
 
 # Task on progress
 * Make MPA cloud working
@@ -10,10 +13,11 @@
 * Develop algorithems for quality sub-graphs
 
 # Task completed
-* All the qurieng tasks could not be completed because we were unable to install CKG on remote server
+* Use procedure to get subgraph
+* Shortest distance Querying
+* Group peptide and protein based on shared overlapped peptides
 
 # Goal for next week
-* Fetch source code of CKG
-	extract classes
-	build nodes
-	try querying in another dataset
+* Evaluate the strategies using test dataset
+* Subgraph using Graph learning algorithm
+ 
