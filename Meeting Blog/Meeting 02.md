@@ -1,3 +1,4 @@
+# Date: 12/14/2020
 # Goals <br/>
 * Prepare a summary of the tasks of meeting one
 * get familiar with jabref to cite paper in latex
