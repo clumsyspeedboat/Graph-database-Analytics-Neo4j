@@ -1,3 +1,4 @@
+# Date: 1/2/2020
 # Goals
 * Strategies to optimize the Queries and nodes
 * Group peptide and proteins based on shared, overlapped peptides
@@ -11,7 +12,10 @@
 * Strategies to optimize the Queries
 
 # Task completed
+Task couldnt be completed due to bad performance of ckg therefore decision to create remote access was taken
 
 
 # Goal for next week
+* Complete the task in progress
+* Shared clusters
 
