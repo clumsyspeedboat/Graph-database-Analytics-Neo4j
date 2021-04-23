@@ -1,4 +1,4 @@
-# Date: 1/25/2021
+# Date: 1/2/2021
 # Goals
 * Shortest Distance Quering
 * Interesting queries for clinical purposes
