@@ -1,3 +1,4 @@
+# Date: 1/11/2021
 # Goals
 * Prepare installation script for CKG in Neo4j
 * Strategy to improve graphdatabase
