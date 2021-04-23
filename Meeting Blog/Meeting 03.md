@@ -1,3 +1,4 @@
+# Date: 12/21/2020
 # Goals
 * Integrate CKG into Neo4j<br/>
 * Figuring out the criterias to compare graph database <br/>
