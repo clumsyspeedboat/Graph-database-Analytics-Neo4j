@@ -10,10 +10,11 @@ This file contains the cypher queries to upload the csv file into Neo4j and crea
 
 ### Steps
 * Create a database in Neo4j 
-* Open the "import" folder of your database and the drop the file "hfp.csv"
+* Open the "import" folder of your database and the drop the file "hfp.csv" / or you can make a new csv file in excel and copy the contents of "hfp.csv" from Github
 * Start your database
 * Open Neo4j Browser
 * Open the "load_data_hfp.cypher" in GitHub or notepad/text editor and copy all the cypher queries
+  * Alternatively, use apoc.cypher.runFile Procedure (https://neo4j.com/labs/apoc/4.1/cypher-execution/run-cypher-scripts/) for running the project files 
 * Paste the query in the Neo4j browser and run
 
 ### Acknowledgement
