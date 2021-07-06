@@ -18,10 +18,10 @@ This file contains the cypher queries to upload the csv file into Neo4j and crea
 * Paste the query in the Neo4j browser and run
 
 ### Acknowledgement
-'''
+```
 Citation
 Davide Chicco, Giuseppe Jurman: Machine learning can predict survival of patients with heart failure from serum creatinine and ejection fraction alone. BMC Medical Informatics and Decision Making 20, 16 (2020). (link)
 
 License
 CC BY 4.0
-'''
+```
