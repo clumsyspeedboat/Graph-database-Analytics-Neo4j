@@ -17,8 +17,8 @@ This file contains the cypher queries to upload the csv file into Neo4j and crea
 * Paste the query in the Neo4j browser and run
 
 ### Acknowledgement
-'''
+```
 Citation
 
 
-'''
+```
