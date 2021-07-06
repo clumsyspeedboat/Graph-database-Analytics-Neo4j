@@ -1,6 +1,6 @@
 # Dataset : Heart Failure Prediction
 
-You will find two files in this folder. A short descrption of each file and how to use it is written below:
+You will find two files in this folder. A short descrption of the dataset and how to use it is written below:
 
 ## hfp.csv
 This csv file contain 'Heart Failure Prediction' dataset. It contains 14 coulmns and 299 rows. Heart faliure commonly occurs because of Cardiovascular diseases (CVDs) and we can features in this dataset to predict mortality by heart faliure
