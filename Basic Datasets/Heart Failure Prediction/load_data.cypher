@@ -25,4 +25,5 @@ MERGE (p)-[:Levels_Of_Sodium]->(ssn)
 MERGE (p)-[:Smoke]->(sn)
 MERGE (p)-[:Follow_Up]->(tn)
 MERGE (tn)-[:Decreased]->(den)
+
 RETURN count(*);
