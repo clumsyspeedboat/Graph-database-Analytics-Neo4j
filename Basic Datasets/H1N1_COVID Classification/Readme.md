@@ -19,6 +19,6 @@ This file contains the cypher queries to upload the csv file into Neo4j and crea
 ### Acknowledgement
 ```
 Citation
-
+https://github.com/yoshihiko1218/COVID19ML
 
 ```
