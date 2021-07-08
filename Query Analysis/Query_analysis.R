@@ -8,11 +8,11 @@ rm(list=ls())   # Clear all variables
 
 
 # Load required packages #
-if(!require("ggplot2")) install.packages("ggplot2") # Visualization
-if(!require("psych")) install.packages("psych") # Pair plot Visualization
-if(!require("ggpubr")) install.packages("ggpubr") # Scatter plot Visualization
-if(!require("factoextra")) install.packages("factoextra") # PCA Visualization
-if(!require("ggdendro")) install.packages("ggdendro")       #For making different Dendograms
+if(!require("ggplot2")) install.packages("ggplot2")         # Visualization
+if(!require("psych")) install.packages("psych")             # Pair plot Visualization
+if(!require("ggpubr")) install.packages("ggpubr")           # Scatter plot Visualization
+if(!require("factoextra")) install.packages("factoextra")   # PCA Visualization
+if(!require("ggdendro")) install.packages("ggdendro")       # For making different Dendrograms
 
 library("ggplot2")
 library("psych")
@@ -30,6 +30,7 @@ data[,c(1,2,9)] <- lapply(data[,c(1,2,9)], as.factor)
 data[,3:8] <- lapply(data[,3:8], as.numeric)
 
 
+
 # Histograms #
 ggplot(data, aes(x = Rows)) + geom_histogram(color = "black", fill = "blue")
 ggplot(data, aes(x = DB_hits)) + geom_histogram(color = "black", fill = "blue")
@@ -38,6 +39,13 @@ ggplot(data, aes(x = time_ind)) + geom_histogram(color = "black", fill = "blue")
 ggplot(data, aes(x = time.not_ind.ind.)) + geom_histogram(color = "black", fill = "blue")
 ggplot(data, aes(x = Memory)) + geom_histogram(color = "black", fill = "blue")
 
+# Box Plots #
+ggplot(data, aes(x = Rows)) + geom_boxplot(color = "black", fill = "blue")
+ggplot(data, aes(x = DB_hits)) + geom_boxplot(color = "black", fill = "blue")
+ggplot(data, aes(x = time_not_ind)) + geom_boxplot(color = "black", fill = "blue")
+ggplot(data, aes(x = time_ind)) + geom_boxplot(color = "black", fill = "blue")
+ggplot(data, aes(x = time.not_ind.ind.)) + geom_boxplot(color = "black", fill = "blue")
+ggplot(data, aes(x = Memory)) + geom_boxplot(color = "black", fill = "blue")
 
 # Violin Plots #
 ggplot(data, aes(x = Cache_memory, y = time_not_ind, color = Cache_memory)) + geom_violin() + geom_jitter(shape=16, position=position_jitter(0.2))
@@ -64,7 +72,7 @@ pairs.panels(data[,3:9],
               )
 
 
-# Scatter plot with correlation coefficient Rows vs DB_hits
+## Scatter plot with correlation coefficient Rows vs DB_hits ##
 sp <- ggscatter(data, x = "Rows", y = "DB_hits",
                 add = "reg.line",  # Add regression line
                 add.params = list(color = "blue", fill = "lightgray"), # Customize reg. line
@@ -147,8 +155,16 @@ h_clust <- eclust(data[,3:8], "hclust" , 3, hc_metric = "euclidean", hc_method =
 fviz_dend(h_clust, show_labels = TRUE, palette = "jco", as.ggplot = TRUE)
 
 
+#####################
+# Linear Regression #
 
+data1 <- data[0:0,]
+data1[1,] <- rbind(data1,list("Metaprotein_1", "Q7", 40, 320, 56, 65, -9, 3872, "default"))
 
+lm1 <- lm(time_not_ind ~ . , data = data[1:41,c(3,4,5,8)])
+lm2 <- lm(time_ind ~ . , data = data[1:41,c(3,4,6,8)])
+lm3 <- lm(time.not_ind.ind. ~ . , data = data[1:41,c(3,4,7,8)])
 
-
-
+data1$predictedTime_ni <- predict(lm1, data1[,c(3,4,5,8)])
+data1$predictedTime_i <- predict(lm2, data1[,c(3,4,6,8)])
+data1$predictedTime_t <- predict(lm3, data1[,c(3,4,7,8)])
