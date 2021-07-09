@@ -26,8 +26,8 @@ data <- file.choose()
 data <- read.csv(data, header = TRUE, sep = ",")
 
 # Transform Variables #
-data[,c(1,2,9)] <- lapply(data[,c(1,2,9)], as.factor)
-data[,3:8] <- lapply(data[,3:8], as.numeric)
+data[,8] <- as.factor(data[,8])
+data[,2:7] <- lapply(data[,2:7], as.numeric)
 
 
 
@@ -50,12 +50,9 @@ ggplot(data, aes(x = Memory)) + geom_boxplot(color = "black", fill = "blue")
 # Violin Plots #
 ggplot(data, aes(x = Cache_memory, y = time_not_ind, color = Cache_memory)) + geom_violin() + geom_jitter(shape=16, position=position_jitter(0.2))
 ggplot(data, aes(x = Cache_memory, y = time_ind, color = Cache_memory)) + geom_violin() + geom_jitter(shape=16, position=position_jitter(0.2))
-ggplot(data, aes(x = Dataset, y = time_not_ind, color = Dataset)) + geom_violin() + geom_jitter(shape=16, position=position_jitter(0.2))
-ggplot(data, aes(x = Dataset, y = time_ind, color = Dataset)) + geom_violin() + geom_jitter(shape=16, position=position_jitter(0.2))
 
 
 # Scatter Plot #
-
 # All variables
 pairs.panels(data, 
              method = "pearson", # correlation method
@@ -64,7 +61,7 @@ pairs.panels(data,
              ellipses = TRUE # show correlation ellipses
              )
 # Numeric Variables with Cache memory
-pairs.panels(data[,3:9], 
+pairs.panels(data[,2:8], 
               method = "pearson", # correlation method
               hist.col = "#00AFBB",
               density = TRUE,  # show density plots
@@ -109,7 +106,7 @@ m1_query <- data[20:42,-2]
 
 
 # Principal Component Analysis (Numeric Variables) #
-pca1 <- prcomp(data[,3:8], scale = TRUE, center = TRUE)
+pca1 <- prcomp(data[,2:7], scale = TRUE, center = TRUE)
 
 
 fviz_pca_ind(pca1, habillage=data$Cache_memory,
@@ -148,23 +145,25 @@ fviz_pca_biplot(pca1, repel = F,
 # Clustering #
 
 # K-Means
-eclust(data[,3:8], FUNcluster= "kmeans", 3, hc_metric = "euclidean" , nstart = 25, graph = TRUE)
+eclust(data[,2:7], FUNcluster= "kmeans", 3, hc_metric = "euclidean" , nstart = 25, graph = TRUE)
 
 # Hierarchical
-h_clust <- eclust(data[,3:8], "hclust" , 3, hc_metric = "euclidean", hc_method = "single", graph = FALSE)
+h_clust <- eclust(data[,2:7], "hclust" , 3, hc_metric = "euclidean", hc_method = "single", graph = FALSE)
 fviz_dend(h_clust, show_labels = TRUE, palette = "jco", as.ggplot = TRUE)
-
 
 #####################
 # Linear Regression #
 
-data1 <- data[0:0,]
-data1[1,] <- rbind(data1,list("Metaprotein_1", "Q7", 40, 320, 56, 65, -9, 3872, "default"))
+train <- head(data, n=22)
+test <- tail(data, n=1)
 
-lm1 <- lm(time_not_ind ~ . , data = data[1:41,c(3,4,5,8)])
-lm2 <- lm(time_ind ~ . , data = data[1:41,c(3,4,6,8)])
-lm3 <- lm(time.not_ind.ind. ~ . , data = data[1:41,c(3,4,7,8)])
+data1 <- data[0,1:8]
+data1 <- rbind(data1, test, test)
 
-data1$predictedTime_ni <- predict(lm1, data1[,c(3,4,5,8)])
-data1$predictedTime_i <- predict(lm2, data1[,c(3,4,6,8)])
-data1$predictedTime_t <- predict(lm3, data1[,c(3,4,7,8)])
+lm1 <- lm(time_not_ind ~ . , data = train[,c(2,3,4,7)])
+lm2 <- lm(time_ind ~ . , data = train[,c(2,3,5,7)])
+lm3 <- lm(time.not_ind.ind. ~ . , data = train[,c(2,3,6,7)])
+
+data1[2,4] <- predict(lm1, test[,c(2,3,4,7)])
+data1[2,5] <- predict(lm2, test[,c(2,3,5,7)])
+data1[2,6] <- predict(lm3, test[,c(2,3,6,7)])
