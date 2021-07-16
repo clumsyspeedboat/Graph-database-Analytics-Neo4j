@@ -1,6 +1,6 @@
 # Dataset : Metaprotein
 
-You will find five files in this folder. A short descrption of the dataset and how to use it is written below:
+You will find five files in this folder. A short descrption of the files and the dataset is written below:
 
 ## proteinlist.csv
 This csv file contain 1999 proteins with their names, ids, metaproteins, taxids and accessions
