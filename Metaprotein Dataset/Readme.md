@@ -16,7 +16,7 @@ This csv file contain 1189 relatioinships between proteins and peptides based on
 ## load_data_metaprotein.cypher
 This file contains the cypher queries to upload the csv file into Neo4j and create nodes, relationships and properties.
 
-## metaprotein_queries
+## metaprotein_queries.doc
 This file contains 35 cypher queries and procedures that we performed on this dataset for benchmarking purposes.
 
 ### Steps
