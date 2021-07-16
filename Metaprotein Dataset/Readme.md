@@ -1,20 +1,23 @@
 # Dataset : Metaprotein
 
-You will find three files in this folder. A short descrption of the dataset and how to use it is written below:
+You will find five files in this folder. A short descrption of the dataset and how to use it is written below:
 
-## protein.csv
-This csv file contain proteins. It contains 14 coulmns and 299 rows.
+## proteinlist.csv
+This csv file contain 1999 proteins with their names, ids, metaproteins, taxids and accessions
 
-## peptide.csv
-This csv file contain peptides. It contains 14 coulmns and 299 rows.
+## peptidelist.csv
+This csv file contain 666 peptides with their ids and types.
 
-## relationships.csv
-This csv file contain relatioinships between proteins and peptides. It contains 14 coulmns and 299 rows. You will find following types of relationships in this file
+## relationshiplist.csv
+This csv file contain 1189 relatioinships between proteins and peptides based on their ids. You will find following types of relationships in this file
  * Shared peptides
  * Peptides set
 
 ## load_data_metaprotein.cypher
 This file contains the cypher queries to upload the csv file into Neo4j and create nodes, relationships and properties.
+
+## metaprotein_queries
+This file contains 35 cypher queries and procedures that we performed on this dataset for benchmarking purposes.
 
 ### Steps
 * Create a database in Neo4j 
