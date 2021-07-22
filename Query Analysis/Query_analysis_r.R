@@ -13,8 +13,6 @@ if(!require("psych")) install.packages("psych")             # Pair plot Visualiz
 if(!require("ggpubr")) install.packages("ggpubr")           # Scatter plot Visualization
 if(!require("factoextra")) install.packages("factoextra")   # PCA Visualization
 if(!require("ggdendro")) install.packages("ggdendro")       # For making different Dendrograms
-if(!require("Metrics")) install.packages("Metrics")         # For root mean squared calculation
-
 
 library("ggplot2")
 library("psych")
