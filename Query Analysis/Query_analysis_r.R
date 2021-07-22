@@ -13,12 +13,15 @@ if(!require("psych")) install.packages("psych")             # Pair plot Visualiz
 if(!require("ggpubr")) install.packages("ggpubr")           # Scatter plot Visualization
 if(!require("factoextra")) install.packages("factoextra")   # PCA Visualization
 if(!require("ggdendro")) install.packages("ggdendro")       # For making different Dendrograms
+if(!require("Metrics")) install.packages("Metrics")         # For root mean squared calculation
+
 
 library("ggplot2")
 library("psych")
 library("ggpubr")
 library("factoextra")
 library("ggdendro")
+library("Metrics")
 
 
 # Uploading data into matrix #
@@ -28,7 +31,6 @@ data <- read.csv(data, header = TRUE, sep = ",")
 # Transform Variables #
 data[,8] <- as.factor(data[,8])
 data[,2:7] <- lapply(data[,2:7], as.numeric)
-
 
 
 # Histograms #
@@ -154,16 +156,22 @@ fviz_dend(h_clust, show_labels = TRUE, palette = "jco", as.ggplot = TRUE)
 #####################
 # Linear Regression #
 
-train <- head(data, n=22)
-test <- tail(data, n=1)
+train <- rbind(data[1:25,], data[36:60,]) 
+test <- rbind(data[26:35,], data[61:70,]) 
 
-data1 <- data[0,1:8]
-data1 <- rbind(data1, test, test)
+comp <- test[,4:6]
 
 lm1 <- lm(time_not_ind ~ . , data = train[,c(2,3,4,7)])
 lm2 <- lm(time_ind ~ . , data = train[,c(2,3,5,7)])
 lm3 <- lm(time.not_ind.ind. ~ . , data = train[,c(2,3,6,7)])
 
-data1[2,4] <- predict(lm1, test[,c(2,3,4,7)])
-data1[2,5] <- predict(lm2, test[,c(2,3,5,7)])
-data1[2,6] <- predict(lm3, test[,c(2,3,6,7)])
+comp$pred_ni <- predict(lm1, test[,c(2,3,4,7)])
+comp$pred_i <- predict(lm2, test[,c(2,3,5,7)])
+comp$avg <- predict(lm3, test[,c(2,3,6,7)])
+
+
+table(ifelse(comp$pred_ni > comp$time_not_ind, 'Procedure',
+             ifelse(comp$pred_ni < comp$time_not_ind, 'General','NA')))
+
+table(ifelse(comp$pred_i > comp$time_ind, 'Procedure',
+             ifelse(comp$pred_i < comp$time_ind, 'General','NA')))
