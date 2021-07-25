@@ -19,7 +19,6 @@ library("psych")
 library("ggpubr")
 library("factoextra")
 library("ggdendro")
-library("Metrics")
 
 
 # Uploading data into matrix #
@@ -92,17 +91,16 @@ sp + stat_cor(method = "pearson", label.x = 3, label.y = 30)
 ## Unsupervised Learning ##
 
 # Query Groups
+# c <- data[1:11,2]
+# c <- replace(c, c, "c")
+# h <- data[12:13,2]
+# m <- data[14:19,2]
+# m1 <- data[20:42,2]
 
-c <- data[1:11,2]
-c <- replace(c, c, "c")
-h <- data[12:13,2]
-m <- data[14:19,2]
-m1 <- data[20:42,2]
-
-c_query <- data[1:11,-2]
-h_query <- data[12:13,-2]
-m_query <- data[14:19,-2]
-m1_query <- data[20:42,-2]
+# c_query <- data[1:11,-2]
+# h_query <- data[12:13,-2]
+# m_query <- data[14:19,-2]
+# m1_query <- data[20:42,-2]
 
 
 # Principal Component Analysis (Numeric Variables) #
