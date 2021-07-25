@@ -22,3 +22,13 @@ find the following in the R script
 4. **Scatter Plots with Correlation Coefficients** of all combination of variables 
 5. **Principal Compnent Analysis** of Numeric Variables
 6. **Regression Analysis** to predict time of Stored Procedures (has "P" in Query variable) after model is trained with pure Cypher queries
+
+
+## For analysis in PYTHON
+Open the **Query_analysis_python.ipynb** in Jupyter Notebook and run the code line by line.
+1. **Histograms** of Numeric Variables
+2. **Boxplots** of Numeric Variables
+3. **Violin Plots** of time variables with respect to Cache Memory
+4. **Scatter Plots with Correlation Coefficients** of all combination of variables 
+5. **Regression Analysis** to predict time of Stored Procedures (has "P" in Query variable) after model is trained with pure Cypher queries
+
