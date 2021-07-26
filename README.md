@@ -1,8 +1,8 @@
-# Graph-database-Analytics-Neo4j-
+# Graph-database-Analytics-Neo4j
 A project on neo4j for an evaluation on best practies. 
 
 ## Goals
-Show potential of neo4j for the analysis of clinical data and provide performant Queries
+Show potential of neo4j for the analysis of clinical data and provide performant queries
 
 ## Project Overview
 ![Mindmap_ga](https://user-images.githubusercontent.com/57228346/127015067-0f4030e2-9b14-4568-9106-cbea04bdb4f8.png)
