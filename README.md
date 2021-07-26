@@ -2,7 +2,7 @@
 A project on neo4j for an evaluation on best practies
 
 ## Project Overview
-![mindmap](https://user-images.githubusercontent.com/57228346/126907002-013104ac-564c-438f-ad3e-87289f647f9e.png)
+![Mindmap_ga](https://user-images.githubusercontent.com/57228346/127015067-0f4030e2-9b14-4568-9106-cbea04bdb4f8.png)
 
 ## Members
 Rahul Mondal : rahulmondal415@gmail.com <br/>
