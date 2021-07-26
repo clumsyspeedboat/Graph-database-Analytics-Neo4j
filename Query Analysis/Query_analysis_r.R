@@ -29,6 +29,38 @@ data <- read.csv(data, header = TRUE, sep = ",")
 data[,8] <- as.factor(data[,8])
 data[,2:7] <- lapply(data[,2:7], as.numeric)
 
+# Numeric Analysis #
+
+# time not indexed and indexed
+mean_time_not_indexed <- mean(data$time_not_ind)
+mean_time_indexed <- mean(data$time_ind)
+wilcox.test(data$time_not_ind, data$time_ind)
+
+# Cache memory default vs zero 
+data_cm1 <- data[1:35,]
+data_cm0 <- data[-c(1:35),]
+
+cm0_mean_time_not_indexed <- mean(data_cm0$time_not_ind)
+cm0_mean_time_indexed <- mean(data_cm0$time_ind)
+
+cm1_mean_time_not_indexed <- mean(data_cm1$time_not_ind)
+cm1_mean_time_indexed <- mean(data_cm1$time_ind)
+
+wilcox.test(data_cm0$time_not_ind, data_cm1$time_not_ind)
+wilcox.test(data_cm0$time_ind, data_cm1$time_ind)
+
+# Cyher query vs stored procedures
+data_cq <- rbind(data[1:25,], data[36:60,]) 
+data_sp <- rbind(data[26:35,], data[61:70,]) 
+
+cq_mean_time_not_indexed <- mean(data_cq$time_not_ind) 
+cq_mean_time_indexed <- mean(data_cq$time_ind)
+
+sp_mean_time_not_indexed <- mean(data_sp$time_not_ind) 
+sp_mean_time_indexed <- mean(data_sp$time_ind)
+
+wilcox.test(data_cq$time_not_ind, data_cq$time_ind)
+
 
 # Histograms #
 ggplot(data, aes(x = Rows)) + geom_histogram(color = "black", fill = "blue")
