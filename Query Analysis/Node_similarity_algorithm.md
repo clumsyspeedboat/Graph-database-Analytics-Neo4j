@@ -8,3 +8,5 @@ Jaccard Index = (the number in both sets) / (the number in either set) * 100
 
 The same formula in notation is:
 J(X,Y) = |X∩Y| / |X∪Y|
+
+The Node Similarity algorithm compares each node that has outgoing relationships with each other such node. For every node n, we collect the outgoing neighborhood N(n) of that node, that is, all nodes m such that there is a relationship from n to m. For each pair n, m, the algorithm computes a similarity for that pair which is the Jaccard similarity of N(n) and N(m).
