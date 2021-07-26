@@ -36,3 +36,5 @@ It shows that Peptide-560 and Peptide-559 are fully similar or in other words, h
 
 ![NS_Res_2](https://user-images.githubusercontent.com/49483578/127022231-2629a7b8-61a7-4e71-8813-54ff19b4bf8b.png)
 
+
+_Some of the data from above is copied from Neo4j website: https://neo4j.com/docs/graph-data-science/current/algorithms/node-similarity/_
