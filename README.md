@@ -17,10 +17,3 @@ This repository contains 03 folders. A short description of contents of each is 
   
   ### Query Analysis
   This folder contains all our cypher queries which we performed on Neo4j Shell for performance testing and their analysis on Python and R. 
-
-## Members
-Rahul Mondal : rahulmondal415@gmail.com <br/>
-Syed Abdullah Rizvi : syedabdullahrizvi@gmail.com<br/>
-Danish Murad : Danishmurad@gmail.com <br/>
-Faizan Ali : faizan8201@gmail.com <br/>
-Sitashma Rajbhandari : sitashmarajbhandari@gmail.com <br/>
