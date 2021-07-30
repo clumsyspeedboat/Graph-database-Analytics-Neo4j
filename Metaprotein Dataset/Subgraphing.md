@@ -8,4 +8,6 @@ Neo4j contains a library called the Graph Data Science (GDS) Library that provid
 
 ### Syntax and Use
 
+In our case, we used subgraphing to load to project our graph into an in-memory graph. To do this we can use a built-in procedured called gds.graph.create, which takes three mandatory parameters: subgraph name, the nodes, and the relationships.
+
 
