@@ -10,7 +10,7 @@ Neo4j contains a library called the Graph Data Science (GDS) Library that provid
 
 In our case, we used subgraphing to load to project our graph into an in-memory graph to run algorithms. To do this, first we build the database using the method outlined previously for the metaprotein dataset, enable GDS library functionality in the graph, and then we can use a built-in procedured called gds.graph.create. 
 
-gds.graph.create takes mandatory parameters: subgraph name, the nodes, and the relationships. 
+gds.graph.create takes mandatory parameters: subgraph name, the nodes, and the relationships. There is a possiblity to set further optional parameter(s) as well. 
 ```
 CALL gds.graph.create(
     graphName: String,
