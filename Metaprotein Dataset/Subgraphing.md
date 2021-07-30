@@ -4,4 +4,4 @@ Our dataset is essentially a big network of multiple connected nodes and relatio
 
 ## Subgraphing in Neo4j
 
-Neo4j contains a built-in library called the Graph Data Science (GDS) Library. 
+Neo4j contains a library called the Graph Data Science (GDS) Library that provides built-in support for efficiently implemented algorithms that can be run on the graphs. Different algorithms compute scores or structures or patterns differently. However one essential step before running these algorithms is subgraphing. Breaking down the whole network into smaller chunks makes it faster and less resource-intensive when running GDS algorithms and procedures. 
