@@ -25,4 +25,5 @@ In our case we can use shorthand notation to easily create a subgraph of all pep
 CALL gds.graph.create( 'myGraph',{Peptide:{label:'Peptide'}, Protein:{label:'Protein'} }, '*') YIELD graphName, nodeCount, relationshipCount;
 ```
 
+Once the subgraph is created and loaded, it is possible to use any GDS algorthim outlined in our list of queries. 
 
